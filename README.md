@@ -36,22 +36,22 @@ __OR__
 
 ####Highlights
 ######Over 95% shared code between platforms:
-<img src="../../wiki/images/XamarinCRM_shared_code.png" alt="Over 95% shared code" width="75%">
+<img src="https://github.com/xamarin/app-crm/wiki/images/XamarinCRM_shared_code.png" alt="Over 95% shared code" width="75%">
 
 ######Natively rendered controls:
-<img src="../../wiki/images/XamarinCRM_native_controls.png" alt="Natively rendered controls" width="50%">
+<img src="https://github.com/xamarin/app-crm/wiki/images/XamarinCRM_native_controls.png" alt="Natively rendered controls" width="50%">
 
 ######OAuth authentication using Microsoft's ADAL (Active Directory Authentication Library):
-<img src="../../wiki/images/XamarinCRM_authentication.png" alt="ADAL OAuth authentication" width="50%">
+<img src="https://github.com/xamarin/app-crm/wiki/images/XamarinCRM_authentication.png" alt="ADAL OAuth authentication" width="50%">
 
 ######Beautiful charts with Syncfusion Essential Studio:
-<img src="../../wiki/images/XamarinCRM_graphs.png" alt="Syncfusion charts" width="100%">
+<img src="https://github.com/xamarin/app-crm/wiki/images/XamarinCRM_graphs.png" alt="Syncfusion charts" width="100%">
 
 ######Native mapping on each platform:
-<img src="../../wiki/images/XamarinCRM_native_maps.png" alt="Native mapping" width="50%">
+<img src="https://github.com/xamarin/app-crm/wiki/images/XamarinCRM_native_maps.png" alt="Native mapping" width="50%">
 
 ######Easy list views with data-binding:
-<img src="../../wiki/images/XamarinCRM_bindable_list.png" alt="Easy list data-binding" width="50%">
+<img src="https://github.com/xamarin/app-crm/wiki/images/XamarinCRM_bindable_list.png" alt="Easy list data-binding" width="50%">
 
 ##Azure Mobile Service for data (.NET backend)
 ####[Setup Instructions](https://github.com/xamarin/app-crm/wiki/Setup-Xamarin-CRM-Azure-Mobile-Service-for-backend-data)

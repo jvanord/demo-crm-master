@@ -24,7 +24,7 @@ xmlns:i18n="clr-namespace:XamarinCRM.Localization"
 	         	AbsoluteLayout.LayoutFlags="YProportional,WidthProportional">
 	         	<Label 
 					x:Name="SplashTitle" 
-					Text="{i18n:Translate Splash_Title}" 
+					Text="Indasys CRM Demo" 
 					TextColor="{x:Static statics:Palette._018}" 
 					XAlign="Center" 
 					YAlign="Center" 

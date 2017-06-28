@@ -9,7 +9,7 @@ using XamarinCRM.ViewModels.Splash;
 using Microsoft.IdentityModel.Clients.ActiveDirectory;
 using Xamarin;
 
-namespace XamarinCRM.Pages.Splash 
+namespace XamarinCRM.Pages.Splash
 {
     public partial class SplashPage : SplashPageXaml
     {
@@ -24,16 +24,16 @@ namespace XamarinCRM.Pages.Splash
 
             SignInButton.GestureRecognizers.Add(
                 new TapGestureRecognizer()
-                { 
-                    NumberOfTapsRequired = 1, 
-                    Command = new Command(SignInButtonTapped) 
+                {
+                    NumberOfTapsRequired = 1,
+                    Command = new Command(SignInButtonTapped)
                 });
 
             SkipSignInButton.GestureRecognizers.Add(
                 new TapGestureRecognizer()
-                { 
-                    NumberOfTapsRequired = 1, 
-                    Command = new Command(SkipSignInButtonTapped) 
+                {
+                    NumberOfTapsRequired = 1,
+                    Command = new Command(SkipSignInButtonTapped)
                 });
         }
 
@@ -81,13 +81,15 @@ namespace XamarinCRM.Pages.Splash
 
         async void SignInButtonTapped()
         {
+            await DisplayAlert("Skipping Sign In", "The current demo data does not allow sign-in at this time. But it's not important for the demo.", "OK");
+            return;
             await App.ExecuteIfConnected(async () =>
-                {
+                 {
                     // trigger the activity indicator through the IsPresentingLoginUI property on the ViewModel
                     ViewModel.IsPresentingLoginUI = true;
 
-                    if (await Authenticate())
-                    {
+                     if (await Authenticate())
+                     {
                         // Pop off the modally presented SplashPage.
                         // Note that we're not popping the ADAL auth UI here; that's done automatcially by the ADAL library when the Authenticate() method returns.
                         App.GoToRoot();
@@ -96,8 +98,8 @@ namespace XamarinCRM.Pages.Splash
                         // This is mostly just for Android. We need to trigger Android to call the SalesDashboardPage.OnAppearing() method,
                         // because unlike iOS, Android does not call the OnAppearing() method each time that the Page actually appears on screen.
                         MessagingCenter.Send(this, MessagingServiceConstants.AUTHENTICATED);
-                    }
-                });
+                     }
+                 });
         }
 
         async void SkipSignInButtonTapped()

@@ -13,12 +13,12 @@ using HockeyApp.Android;
 
 namespace XamarinCRMAndroid
 {
-	[Activity(Label = "XamarinCRM", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
-    public class MainActivity : FormsAppCompatActivity
-    {
-        protected override void OnCreate(Bundle bundle)
-        {
-            base.OnCreate(bundle);
+	[Activity(Label = "Indasys CRM Demo", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
+	public class MainActivity : FormsAppCompatActivity
+	{
+		protected override void OnCreate(Bundle bundle)
+		{
+			base.OnCreate(bundle);
 
 			// Set the HockeyApp App Id here:
 			CrashManager.Register(this, "11111111222222223333333344444444"); // This is just a dummy value. Replace with your real HockeyApp App ID
@@ -26,23 +26,23 @@ namespace XamarinCRMAndroid
 			// Azure Mobile Services initilization
 			Microsoft.WindowsAzure.MobileServices.CurrentPlatform.Init();
 
-            Forms.Init(this, bundle);
+			Forms.Init(this, bundle);
 
-            FormsMaps.Init(this, bundle);
-            FormsAppCompatActivity.ToolbarResource = Resource.Layout.toolbar;
-            FormsAppCompatActivity.TabLayoutResource = Resource.Layout.tabs;
-            new SfChartRenderer(); // This is necessary for initializing SyncFusion charts.
-            ImageCircleRenderer.Init();
+			FormsMaps.Init(this, bundle);
+			FormsAppCompatActivity.ToolbarResource = Resource.Layout.toolbar;
+			FormsAppCompatActivity.TabLayoutResource = Resource.Layout.tabs;
+			new SfChartRenderer(); // This is necessary for initializing SyncFusion charts.
+			ImageCircleRenderer.Init();
 
-            LoadApplication(new App());
-        }
+			LoadApplication(new App());
+		}
 
-        protected override void OnActivityResult(int requestCode, Result resultCode, Intent data)
-        {
-            base.OnActivityResult(requestCode, resultCode, data);
-            AuthenticationAgentContinuationHelper.SetAuthenticationAgentContinuationEventArgs(requestCode, resultCode, data);
-        }
-    }
+		protected override void OnActivityResult(int requestCode, Result resultCode, Intent data)
+		{
+			base.OnActivityResult(requestCode, resultCode, data);
+			AuthenticationAgentContinuationHelper.SetAuthenticationAgentContinuationEventArgs(requestCode, resultCode, data);
+		}
+	}
 }
 
 
